@@ -4,19 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>my new page</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <h1>Worst Calculator Ever (only addition)</h1>
-    <input type="text" placeholder="insert number one" id="number1">
-    <input type="text" placeholder="insert number two" id="number2">
-    <button onclick="firstfunction()"> Click Here to Calc</button>
+    <input type="text" placeholder="insert number one" id="number1" onfocus="this.value=''">
+    <input type="text" placeholder="insert number two" id="number2" onfocus="this.value=''">
+    <button onclick="firstfunction()"> Click Here to Calc</button> 
+    <div id="my_result" style="width: 400px; height: 50px;"> </div>
+    <button onclick="fclear()">Click Here to Clear</button>
+    
     <script>
-        let firstfunction = function(){ 
+        
+        let firstfunction = function() { 
+            let myResult = document.getElementById('my_result')
             let shown1 = parseInt(document.querySelector('#number1').value);
             let shown2 = parseInt(document.querySelector('#number2').value);
-            let showr = shown1 + shown2
-            alert(`${showr}`);
+            let shown = shown1 + shown2
+            myResult.innerHTML = shown
+            console.log(myResult.childNodes);
         }
-    </script>
+
+        let fclear = function () {
+            document.getElementById('number1').value="";
+            document.getElementById('number2').value="";
+            document.getElementById('my_result').innerHTML="";
+        }
+
+    </script>    
+    
+<!-- button onclick="document.getElementById('my_result').innerHTML.value=''"> Click Here to Clear Result -->
+
 </body>
 </html>
