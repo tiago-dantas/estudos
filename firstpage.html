@@ -6,13 +6,16 @@
   <title>my new page</title>
 </head>
 <body>
-    <h1>This is my first page</h1>
-    <input type="text" placeholder="insert name" id="name">
-    <button onclick="firstfunction()"> Click Here</button>
+    <h1>Worst Calculator Ever (only addition)</h1>
+    <input type="text" placeholder="insert number one" id="number1">
+    <input type="text" placeholder="insert number two" id="number2">
+    <button onclick="firstfunction()"> Click Here to Calc</button>
     <script>
         let firstfunction = function(){ 
-            let showname = document.querySelector('#name').value;
-            alert(showname);
+            let shown1 = parseInt(document.querySelector('#number1').value);
+            let shown2 = parseInt(document.querySelector('#number2').value);
+            let showr = shown1 + shown2
+            alert(`${showr}`);
         }
     </script>
 </body>
