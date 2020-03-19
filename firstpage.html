@@ -7,7 +7,13 @@
 </head>
 <body>
     <h1>This is my first page</h1>
-
-    <button> Click Here</button>
+    <input type="text" placeholder="insert name" id="name">
+    <button onclick="firstfunction"> Click Here</button>
+    <script>
+        let firstfunction = function(){ 
+            let showname = document.querySelector('#name').value;
+            alert(showname);
+        }
+    </script>
 </body>
 </html>
