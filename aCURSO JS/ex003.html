@@ -9,33 +9,34 @@
 </head>
 
 <body>
-
-
-
     <div id="dinput">
         <input id="iname" type="text" placeholder="Insert Your Name"><br/>
         <input id="iage" type="text" placeholder="Insert Your Age"><br/>
         <input id="igender" type="text" placeholder="Insert You Gender"><br/>
-        <input id="iclassatacante" type="checkbox" placeholder="Choose Your Class">
+    </div>
+    <div id="dcheckbox">
+        <input id="iclassatacante" type="checkbox" class="checkgroup">
         <label for="iclassatacante">Atacante</label><br/>
-        <input id="iclassarmador" type="checkbox" placeholder="Choose Your Class">
+        <input id="iclassarmador" type="checkbox" class="checkgroup">
         <label for="iclassaarmador">Armador</label><br/>
-        <input id="iclasslateral" type="checkbox" placeholder="Choose Your Class">
+        <input id="iclasslateral" type="checkbox" class="checkgroup">
         <label for="iclasslateral">Lateral</label><br/>
-        <input id="iclasszagueiro" type="checkbox" placeholder="Choose Your Class">
+        <input id="iclasszagueiro" type="checkbox" class="checkgroup">
         <label for="iclasszagueiro">Zagueiro</label><br/>
-        <input id="iclassgoleiro" type="checkbox" placeholder="Choose Your Class">
+        <input id="iclassgoleiro" type="checkbox" class="checkgroup">
         <label for="iclassgoleiro">Goleiro</label><br/>
+    </div>
+    <div id="dselect">
         <select id="slane" placeholder="Choose Your Lane"><br/>
             <option value="Mid">Mid</option>
             <option value="Bot">Bot</option>
             <option value="Top">Top</option>
             <option value="Jungle">Jungle</option>
-    </div><br/><br/><br/>
+    </div>  
     <div id="dbutton">
-        <button id="bsearch" onclick="fsearch"> Click Here to Find</button>
-    </div>
-  
+        <button id="bsubscribe" onclick="fsubscribe"> Click Here to Subscribe</button>
+    </div><br/>
+    <div id="showsubscribe"></div><br/>  
     <script src="script/ex003.js"></script>
 </body>
 
