@@ -1,0 +1,9 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "html.format.enable": false,
+    "html.format.endWithNewline": true,
+    "editor.wordWrap": "on",
+    "debug.console.wordWrap": false,
+    "html.format.wrapAttributes": "force"
+}

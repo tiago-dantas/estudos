@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator </title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: brown;
+        }
+        
+        h1 {
+            color: crimson;
+            font-size: 25pt;
+        }
+        
+        #dshow {
+            width: 200px;
+            height: 200px;
+            border: 1px solid yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="n1" placeholder="insert number 1">
+    <input id="n2" placeholder="insert number 2">
+
+    <button id="b1" onclick="fb1()">Click Here to Calc</button>
+
+    <div id="dshow"></div>
+    <script>
+        let fb1 = function() {
+            let f1 = parseInt(document.getElementById('n1').value);
+            let f2 = parseInt(document.getElementById('n2').value);
+            let calc = f1 + f2
+            let result = document.getElementById('dshow')
+            result.innerHTML = calc
+        }
+    </script>
+</body>
+
+</html>

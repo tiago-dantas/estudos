@@ -4,16 +4,8 @@ let lage = document.getElementById(iage).Value;
 let lgender = document.getElementById(igender).Value;
 let llane = document.getElementById(slane).Value;
 
+// button  
 
-
-// NÃO ARRUMAR ABAIXO
-
-
-
-// button  //arrumar esse código não está funcionando. Template string deve estar errada.
-// ANDREY, NÃO ARRUMAR. Preciso aprender e vou tentar arrumar.
-
-/*
 let fsubscribe = function() {
     let lbt = document.getElementById(showsubscribe)
     lbt.innerHTML(`Thanks ${lname}. 
@@ -21,22 +13,42 @@ let fsubscribe = function() {
     You go on ${llane} lane and your position is ${lclass}.
     Welcome!`)
 }
-*/
 
-// checkbox  //arrumar esse código. Não está funcionando. NÃO USAR RADIO.
-// ANDREY, NÃO ARRUMAR. Preciso aprender e vou tentar arrumar.
+// checkbox
 
-/*
- let lclass = function() {
-lclass = checkgroup
+(function() {
+    "use strict";
 
-    .input.checkgroup.click.function() {
-    if (lclass(this).is(":checked")) {
-        lclass('input.checkgroup').attr('disabled', true);
-        lclass(this).removeAttr('disabled');
-    } else {
-        lclass('input.checkgroup').removeAttr('disabled');
+    var marcados = 0;
+    var verifyCheckeds = function($checks) {
+        if (marcados >= 1) {
+            loop($checks, function($element) {
+                $element.disabled = $element.checked ? '' : 'disabled';
+            });
+        } else {
+            loop($checks, function($element) {
+                $element.disabled = '';
+            });
+        }
+    };
+    var loop = function($elements, cb) {
+        var max = $elements.length;
+        while (max--) {
+            cb($elements[max]);
+        }
     }
-})
-})
-*/
+    var count = function($element) {
+        return $element.checked ? marcados + 1 : marcados - 1;
+    }
+    window.onload = function() {
+        var $checks = document.querySelectorAll('input[type="checkbox"]');
+        loop($checks, function($element) {
+            $element.onclick = function() {
+                marcados = count(this);
+                verifyCheckeds($checks);
+            }
+            if ($element.checked) marcados = marcados + 1;
+        });
+        verifyCheckeds($checks);
+    }
+}());

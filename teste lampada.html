@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ACENDA A LAMPADA</h1>
+    <img src="GOOGLE GLASS/_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudalampada('lampada-acesa')" onmouseout="mudalampada('lampada-apagada')" onclick="mudalampada('lampada-quebrada')">
+
+    <script>
+        var quebrada = false
+
+        let mudalampada = function (tipo) {
+            if (!quebrada) {
+                document.getElementById("luz").src = "GOOGLE GLASS/_imagens/" + tipo + ".jpg"
+                if (tipo == 'lampada-quebrada'){
+                    quebrada = true
+                }
+            }
+        }
+
+        
+    </script>
+
+</body>
+</html>
