@@ -1,23 +1,69 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
 
-[AQUI ENTRA UMA FOTO]
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre o Google Glass</title>
+    <link rel="stylesheet" type="text/css" href="_css/index.css">
+    <link rel="stylesheet" href="_css/specs.css">
+</head>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+<body>
+    <div id="interface">
 
-Glass > Especificações
-Raio-X no Google Glass
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+        <!-- cabeçalho começo -->
+        <header id="cabecalho">
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+        <ul onmouseout="mudafoto('_imagens/especificacoes.png')">
+            <li onmouseover="mudafoto('_imagens/home.png')"><a href="index.html">Home</a></li>
+            <li onmouseover="mudafoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudafoto('_imagens/fotos.png')"><a href="fotos.html">Fotos</a></li>
+            <li onmouseover="mudafoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
+            <li onmouseover="mudafoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale Conosco</a></li>
+        </ul>
+        </nav>
 
-Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
 
-[AQUI ENTRA UMA IMAGEM]
+            <img id="icone" src="_imagens/especificacoes.png">
 
-Copyright 2013 - by Gustavo Guanabara<
-Facebook | Twitter
+        </header>
+<section id="corpo-full">
+<article id="principal">
+    <header id="cartigo">
+        <hgroup>
+            <h3>Glass > Especificações</h3>
+            <h1>Raio-X no Google Glass</h1>
+            <h2>por Tiago Dantas de Pontes</h2>
+            <h3 class="direita">Atualizado em 04/04/2020</h3>
+        </hgroup>
+    </header>
+    
+        <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+
+    <section id="conteudo">
+            <img src="_imagens/glass-esquema-marcado.jpg" id="foto-marcada" usemap="#meumapa">
+        <map name="meumapa">
+            <area shape="rect" coords="266,206,186,257" href="google-glass.html#tela" target="janela"/>
+        </map>
+
+        <iframe src="google-glass.html" name="janela" id="iframe-spec"></iframe>
+    </section>
+</article>
+</section>
+
+        <footer id="rodape">
+        <p>Copyright &copy; 2020 - by Tiago Dantas<p/>
+        <p><a href="http://facebok.com/tiag0dantas" target="_blank" class="social">Facebook</a> | <a  href="https://www.instagram.com/tiago.dantas.br/" target="_blank" class="social">Instagram</a></p>
+        </footer>
+        <script src="_script/index.js"></script>
+    </div>
+</body>
+
+</html>
